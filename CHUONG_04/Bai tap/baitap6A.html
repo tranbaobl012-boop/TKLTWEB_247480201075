@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tính tuổi người dùng</title>
+  </head>
+  <body>
+    <script language="JavaScript">
+      var d = new Date();
+      var namHienTai = d.getFullYear();
+      var namSinh = prompt("Vui lòng nhập năm sinh của bạn:", "2000");
+      namSinh = parseInt(namSinh);
+
+      if (!isNaN(namSinh) && namSinh > 0 && namSinh <= namHienTai) {
+        var tuoi = namHienTai - namSinh;
+        document.write("<h3>Năm sinh của bạn là: " + namSinh + "</h3>");
+        document.write("<h3>Tuổi hiện tại của bạn là: " + tuoi + " tuổi.</h3>");
+      } else {
+        alert("Năm sinh không hợp lệ! Vui lòng nhập lại.");
+      }
+    </script>
+  </body>
+</html>
